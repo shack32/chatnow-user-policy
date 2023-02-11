@@ -1,0 +1,17 @@
+<BODY>
+    <article id="userpolicy" />
+
+    <script>
+        fetch('https://chatnow.microcms.io/api/v1/userpolicy',
+            { headers: { "X-MICROCMS-API-KEY": "uD0jNOP5agXFQXtgrjBkD7wyzbM26t91Ncgq" } })
+            .then((res) => {
+                return res.json();
+            })
+            .then((json) => {
+                document.getElementById("userpolicy").innerHTML = json.body;
+            })
+            .catch((reason) => {
+                console.log(reason);
+            });
+    </script>
+</BODY>
